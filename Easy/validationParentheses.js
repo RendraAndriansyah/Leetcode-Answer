@@ -1,3 +1,5 @@
+// about stack
+
 var isValid = function (s) {
   let stack = [];
   for (let idx = 0; idx < s.length; idx++) {
