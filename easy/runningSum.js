@@ -10,7 +10,7 @@ var runningSum = function (nums) {
   }
   return res;
 
-  // ~> map solution
+  // ~> map solution faster than other !!!
   let result = 0;
   return nums.map((num) => result);
 
