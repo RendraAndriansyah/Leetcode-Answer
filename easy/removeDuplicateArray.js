@@ -1,19 +1,17 @@
 var removeDuplicates = function (nums) {
-  for (let i = 0; i < nums.length; i++) {
-    let j = i;
-    let countRm = 0;
-
-    if (nums[i] === nums[i + 1]) {
-      while (nums[i] === nums[++j]) {
-        countRm++;
-      }
-      nums.splice(i, countRm);
-      i - countRm;
-    }
+  let i = 0;
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] != nums[i]) nums[++i] = nums[j];
   }
-
-  return nums.length;
+  return ++i;
+  // let result = [];
+  // for (let i = 0; i < nums.length; i++) {
+  //   for (let j = 0; j < nums.length; j++) {
+  //     if (nums[i] === nums[j] && !result.includes(nums[i])) result.push(nums[i]);
+  //   }
+  // }
+  // return result.length;
 };
 
 console.log(removeDuplicates([1, 1, 2]));
-console.log(removeDuplicates([1, 1, 2, 3, 2, 3, 3, 5, 6, 1, 2]));
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
