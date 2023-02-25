@@ -1,8 +1,8 @@
 var countDigits = function (num) {
   //~> ES6 Syntax
   //   return String(num)
-  //     .split("")
-  //     .reduce((a, c) => (a += num % Number(c) === 0 ? 1 : 0), 0);
+  // .split("")
+  // .reduce((a, c) => (a += num % Number(c) === 0 ? 1 : 0), 0);
   // ~> my solution
   let result = 0;
   let convert = String(num);
