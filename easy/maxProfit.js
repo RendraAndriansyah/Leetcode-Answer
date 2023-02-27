@@ -1,11 +1,12 @@
 var maxProfit = function (prices) {
-  let min = prices[0];
-  let max = 0;
+  let buy = prices[0];
+  let sell = 0;
   for (var i = 0; i < prices.length; i++) {
-    if (prices[i] - min > max) max = prices[i] - min;
-    if (prices[i] < min) min = prices[i];
+    if (prices[i] - buy > sell) sell = prices[i] - buy;
+    if (prices[i] < buy) buy = prices[i];
   }
-  return max;
+
+  return sell;
 };
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4]));
