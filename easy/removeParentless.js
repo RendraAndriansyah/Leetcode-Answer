@@ -1,10 +1,20 @@
 var removeOuterParentheses = function (s) {
-  let convert = s.split("").map((x) => [x]);
+  let level = 0;
   let res = "";
-  for (let i = 0; i < convert.length; i++) {
-    if (convert[i] == convert[i + 1]) res += convert[i];
+
+  for (let i = 0; i < s.length; ++i) {
+    if (s[i - 1] === "(" && s[i] === "(") {
+      level++;
+    } else if (s[i - 1] === ")" && s[i] === ")") {
+      level--;
+    }
+
+    if (level > 0) {
+      res += s[i];
+    }
   }
-  console.log(res);
+
+  return res;
 };
 
 console.log(removeOuterParentheses("(()())(())"));
