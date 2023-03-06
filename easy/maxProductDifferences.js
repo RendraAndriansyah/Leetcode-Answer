@@ -5,7 +5,7 @@ var maxProductDifference = function (nums) {
   let min2 = Infinity;
   for (const num of nums) {
     if (num < min1) {
-      min2 = min1;
+      min2 =    min1;
       min1 = num;
     } else if (num < min2) {
       min2 = num;
