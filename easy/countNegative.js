@@ -3,6 +3,7 @@ var countNegatives = function (grid) {
   //     .flat()
   //     .map((x) => x)
   //     .filter((x) => x < 0).length;
+
   const len = grid.flat();
   let count = 0;
   for (const i of len) {
