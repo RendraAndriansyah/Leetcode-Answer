@@ -3,7 +3,6 @@ var titleToNumber = function (columnTitle) {
 	let count = 0;
 	for (const title of columnTitle) {
 		if (columnTitle.length > 1) {
-			continue;
 			count += (columnTitle[0].charCodeAt(0) - 64) * 26;
 		} else {
 			count += title.charCodeAt(0) - 64;
