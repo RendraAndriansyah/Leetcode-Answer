@@ -1,0 +1,33 @@
+var twoSum = function (nums, target) {
+	// ================
+	// === hash map ===
+	// ================
+	const hashSum = new Map();
+	for (let i = 0; i < nums.length; i++) {
+		let check = target - nums[i];
+		if (hashSum.has(check)) {
+			return [hashSum.get(check), i];
+		} else {
+			hashSum.set(nums[i], i);
+		}
+	}
+
+	// ===================
+	// === Brute force ===
+	// ===================
+	// let sum = [];
+	// for (let i = 0; i < nums.length; i++) {
+	// 	for (let j = i + 1; j < nums.length; j++) {
+	// 		if (nums[i] + nums[j] === target) {
+	// 			sum.push(i, j);
+	// 			break;
+	// 		}
+	// 	}
+	// }
+	// return sum;
+};
+
+// console.log(twoSum([2, 7, 11, 15], 9));
+// console.log(twoSum([3, 2, 4], 6));
+console.log(twoSum([2, 3, 8, 4, 6, 3], 6));
+// console.log(twoSum([2, 5, 5, 11], 10));
