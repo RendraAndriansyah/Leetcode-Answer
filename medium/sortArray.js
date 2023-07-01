@@ -35,8 +35,6 @@ var sortArray = function (nums) {
     idxAns++;
   }
   return nums;
-  // ~> ES6
-  return nums.sort((a, b) => a - b);
 };
 
 console.log(sortArray([5, 2, 3, 1]));
